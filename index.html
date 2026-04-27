@@ -24,19 +24,14 @@ body.dark{
   --c-spade:#e8e8e8;--c-club:#e8e8e8;--c-heart:#f87171;--c-diamond:#f87171;
   --lead-bg:#422006;--lead-bdr:#d97706;
 }
-body.four-color{
-  --c-club:#16a34a;--c-diamond:#1d4ed8;
-}
-body.dark.four-color{
-  --c-club:#4ade80;--c-diamond:#60a5fa;
-}
+body.four-color{ --c-club:#16a34a;--c-diamond:#1d4ed8; }
+body.dark.four-color{ --c-club:#4ade80;--c-diamond:#60a5fa; }
+
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f2f5;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:2rem 1rem;}
-body.dark{background:#111}
+body.dark{background:#111;}
 #app{width:100%;max-width:720px;color:var(--txt1)}
 
 .screen{display:none}.screen.active{display:block}
-#signin-screen{min-height:460px;display:none;align-items:center;justify-content:center;flex-direction:column}
-#signin-screen.active{display:flex}
 
 .top-bar{display:flex;justify-content:flex-end;gap:8px;margin-bottom:1rem}
 .toggle-btn{display:flex;align-items:center;gap:5px;padding:5px 10px;border:0.5px solid var(--bdr2);border-radius:20px;background:var(--bg2);color:var(--txt2);font-size:12px;cursor:pointer;font-family:inherit;transition:background 0.15s}
@@ -44,21 +39,9 @@ body.dark{background:#111}
 .toggle-btn.active-toggle{background:var(--accent);color:#fff;border-color:var(--accent)}
 .toggle-icon{font-size:14px;line-height:1}
 
-.google-card{background:var(--bg1);border:0.5px solid var(--bdr);border-radius:var(--rounding-lg);padding:2.5rem 2rem;width:100%;max-width:380px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
-.google-logo{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:1.5rem}
-.google-logo svg{width:28px;height:28px}
-.google-logo span{font-size:22px;font-weight:500;color:var(--txt1)}
-.google-card h2{font-size:20px;font-weight:500;color:var(--txt1);margin-bottom:6px}
-.google-card>p{font-size:14px;color:var(--txt2);margin-bottom:1.5rem}
-.g-input{width:100%;padding:10px 12px;border:1px solid var(--bdr2);border-radius:4px;font-size:14px;color:var(--txt1);background:var(--bg1);margin-bottom:1rem;outline:none;font-family:inherit}
-.g-input:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(26,115,232,0.2)}
-.g-btn{width:100%;padding:10px;background:var(--accent);color:#fff;border:none;border-radius:4px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit}
-.g-btn:hover{background:var(--accent2)}
-.g-link{font-size:13px;color:var(--accent);cursor:pointer;margin-top:1rem;display:block}
-
 #setup-screen{max-width:500px;margin:0 auto;padding:.5rem 0}
-.setup-header h1{font-size:22px;font-weight:500;color:var(--txt1)}
-.setup-header p{font-size:14px;color:var(--txt2);margin-top:4px;margin-bottom:1.25rem}
+.setup-header h1{font-size:26px;font-weight:600;color:var(--txt1)}
+.setup-header p{font-size:14px;color:var(--txt2);margin-top:4px;margin-bottom:1.5rem}
 .setup-section{margin-bottom:1.25rem}
 .setup-label{font-size:11px;font-weight:500;color:var(--txt2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
 .card-count-row{display:flex;align-items:center;gap:10px}
@@ -72,7 +55,7 @@ body.dark{background:#111}
 .remove-btn{width:28px;height:28px;border:0.5px solid var(--bdr2);border-radius:50%;background:none;cursor:pointer;color:var(--txt2);font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .add-btn{font-size:13px;color:var(--accent);background:none;border:none;cursor:pointer;padding:4px 0;display:block;font-family:inherit}
 .add-btn:disabled{color:var(--txt3);cursor:not-allowed}
-.start-btn{width:100%;padding:11px;background:var(--accent);color:#fff;border:none;border-radius:var(--rounding);font-size:15px;font-weight:500;cursor:pointer;margin-top:.5rem;font-family:inherit}
+.start-btn{width:100%;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:var(--rounding);font-size:15px;font-weight:500;cursor:pointer;margin-top:.5rem;font-family:inherit}
 .start-btn:hover{background:var(--accent2)}
 
 #game-screen{max-width:700px;margin:0 auto;padding:.5rem 0}
@@ -103,10 +86,7 @@ body.dark{background:#111}
 .card-corner{position:absolute;top:2px;left:3px;display:flex;flex-direction:column;align-items:flex-start;line-height:1}
 .card-corner .cr{font-size:8px;font-weight:600;line-height:1}
 .card-corner .cs{font-size:7px;line-height:1}
-.suit-s{color:var(--c-spade)}
-.suit-h{color:var(--c-heart)}
-.suit-d{color:var(--c-diamond)}
-.suit-c{color:var(--c-club)}
+.suit-s{color:var(--c-spade)}.suit-h{color:var(--c-heart)}.suit-d{color:var(--c-diamond)}.suit-c{color:var(--c-club)}
 
 .flip-area{background:var(--bg2);border-radius:var(--rounding-lg);padding:1rem;margin-bottom:1rem;text-align:center}
 .flip-area p{font-size:14px;color:var(--txt2);margin-bottom:10px}
@@ -140,31 +120,16 @@ body.dark{background:#111}
 <div id="app">
 
   <div class="top-bar">
-    <button class="toggle-btn" id="four-color-btn" title="4-colour deck">
-      <span class="toggle-icon">&#9670;</span> 4-colour
-    </button>
-    <button class="toggle-btn" id="dark-mode-btn" title="Dark mode">
-      <span class="toggle-icon" id="dark-icon">&#9790;</span> Dark
-    </button>
+    <button class="toggle-btn" id="four-color-btn"><span class="toggle-icon">&#9670;</span> 4-colour</button>
+    <button class="toggle-btn" id="dark-mode-btn"><span class="toggle-icon" id="dark-icon">&#9790;</span> Dark</button>
   </div>
 
-  <div id="signin-screen" class="screen active">
-    <div class="google-card">
-      <div class="google-logo">
-        <svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-3.59-13.46-8.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-        <span>Google</span>
-      </div>
-      <h2>Sign in</h2>
-      <p>to continue to Card Flip</p>
-      <input class="g-input" type="email" id="email-input" placeholder="Email or phone"/>
-      <input class="g-input" type="password" id="pass-input" placeholder="Password" style="display:none;"/>
-      <div id="step1-btns"><button class="g-btn" id="next-btn">Next</button><a class="g-link" id="create-link">Create account</a></div>
-      <div id="step2-btns" style="display:none;"><button class="g-btn" id="signin-btn">Sign in</button></div>
+  <!-- Setup — opens first -->
+  <div id="setup-screen" class="screen active">
+    <div class="setup-header">
+      <h1>&#127137; Card Flip</h1>
+      <p>Choose cards per player, add players, and deal</p>
     </div>
-  </div>
-
-  <div id="setup-screen" class="screen">
-    <div class="setup-header"><h1>Card Flip</h1><p>Choose cards per player, add players, and deal</p></div>
     <div class="setup-section">
       <div class="setup-label">Cards per player</div>
       <div class="card-count-row">
@@ -184,6 +149,7 @@ body.dark{background:#111}
     <button class="start-btn" id="start-game-btn">Deal cards and start</button>
   </div>
 
+  <!-- Game -->
   <div id="game-screen" class="screen">
     <div class="status-bar">
       <div><strong id="turn-label">—</strong></div>
@@ -197,6 +163,7 @@ body.dark{background:#111}
     <div class="log-box" id="log-box"></div>
   </div>
 
+  <!-- Winner -->
   <div id="winner-screen" class="screen">
     <div class="winner-card">
       <div class="winner-top">
@@ -217,11 +184,19 @@ const RANK_VAL={2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,J:11,Q:12,K:13,A:14};
 const SUIT_SYM={s:'\u2660',h:'\u2665',d:'\u2666',c:'\u2663'};
 const SUIT_CLASS={s:'suit-s',h:'suit-h',d:'suit-d',c:'suit-c'};
 const RANK_CHAR={'2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8','9':'9','10':'T','J':'J','Q':'Q','K':'K','A':'A'};
-const FACE_GLYPHS={K:{s:'\u265A',h:'\u265B',d:'\u265B',c:'\u265A'},Q:{s:'\u265B',h:'\u265B',d:'\u265B',c:'\u265B'},J:{s:'\u265E',h:'\u265E',d:'\u265E',c:'\u265E'},A:{s:'\u2605',h:'\u2605',d:'\u2605',c:'\u2605'}};
+const FACE_GLYPHS={
+  K:{s:'\u265A',h:'\u265B',d:'\u265B',c:'\u265A'},
+  Q:{s:'\u265B',h:'\u265B',d:'\u265B',c:'\u265B'},
+  J:{s:'\u265E',h:'\u265E',d:'\u265E',c:'\u265E'},
+  A:{s:'\u2605',h:'\u2605',d:'\u2605',c:'\u2605'}
+};
 
 function maxPlayersFor(n){return Math.floor(52/n);}
 function rankChar(v){if(v===14)return'A';if(v===13)return'K';if(v===12)return'Q';if(v===11)return'J';if(v===10)return'T';return String(v);}
-function handCardsStr(bc){if(!bc||!bc.length)return'';return bc.slice().sort((a,b)=>RANK_VAL[b.rank]-RANK_VAL[a.rank]).map(c=>RANK_CHAR[c.rank]+SUIT_SYM[c.suit]).join(' ');}
+function handCardsStr(bc){
+  if(!bc||!bc.length)return'';
+  return bc.slice().sort((a,b)=>RANK_VAL[b.rank]-RANK_VAL[a.rank]).map(c=>RANK_CHAR[c.rank]+SUIT_SYM[c.suit]).join(' ');
+}
 
 function buildCardFace(c,extra){
   const sc=SUIT_CLASS[c.suit],sym=SUIT_SYM[c.suit];
@@ -286,26 +261,23 @@ function compareTV(a,b){
   return 0;
 }
 
-let currentUser='',players=[],cardCount=10,currentIdx=0;
+let players=[],cardCount=10,currentIdx=0;
 let handToBeat=null,handToBeatOwner='',leadingPlayerIdx=-1,gameLog=[],allDone=false;
-let darkMode=false,fourColor=false;
 
+// Toggles
 document.getElementById('dark-mode-btn').onclick=()=>{
-  darkMode=!darkMode;
-  document.body.classList.toggle('dark',darkMode);
-  document.getElementById('dark-mode-btn').classList.toggle('active-toggle',darkMode);
-  document.getElementById('dark-icon').textContent=darkMode?'\u2600':'\u263E';
+  const on=document.body.classList.toggle('dark');
+  document.getElementById('dark-mode-btn').classList.toggle('active-toggle',on);
+  document.getElementById('dark-icon').textContent=on?'\u2600':'\u263E';
 };
 document.getElementById('four-color-btn').onclick=()=>{
-  fourColor=!fourColor;
-  document.body.classList.toggle('four-color',fourColor);
-  document.getElementById('four-color-btn').classList.toggle('active-toggle',fourColor);
+  const on=document.body.classList.toggle('four-color');
+  document.getElementById('four-color-btn').classList.toggle('active-toggle',on);
 };
 
 function showScreen(id){
-  document.querySelectorAll('.screen').forEach(s=>{s.classList.remove('active');if(s.id==='signin-screen')s.style.display='none';});
-  const el=document.getElementById(id);el.classList.add('active');
-  if(id==='signin-screen')el.style.display='flex';
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
 }
 function buildDeck(){
   const d=[];for(const s of SUITS)for(const r of RANKS)d.push({rank:r,suit:s});
@@ -313,22 +285,10 @@ function buildDeck(){
   return d;
 }
 
-document.getElementById('next-btn').onclick=()=>{
-  const email=document.getElementById('email-input').value.trim();
-  if(!email||!email.includes('@')){document.getElementById('email-input').style.borderColor='#c0392b';return;}
-  currentUser=email.split('@')[0];
-  document.getElementById('email-input').style.display='none';
-  document.getElementById('pass-input').style.display='block';
-  document.getElementById('step1-btns').style.display='none';
-  document.getElementById('step2-btns').style.display='block';
-};
-document.getElementById('create-link').onclick=()=>{document.getElementById('email-input').placeholder='Enter any email to continue';};
-document.getElementById('signin-btn').onclick=()=>{
-  if(!document.getElementById('pass-input').value){document.getElementById('pass-input').style.borderColor='#c0392b';return;}
-  initSetup();showScreen('setup-screen');
-};
+// Boot straight into setup
+players=[{name:'Player 1'}];
+updateCardCountUI();
 
-function initSetup(){cardCount=10;document.getElementById('card-slider').value=10;players=[{name:currentUser||'Player 1'}];updateCardCountUI();}
 function updateCardCountUI(){
   const n=+document.getElementById('card-slider').value;cardCount=n;
   const max=maxPlayersFor(n);
@@ -345,7 +305,8 @@ function renderSetup(){
   const list=document.getElementById('player-list');list.innerHTML='';
   players.forEach((p,i)=>{
     const row=document.createElement('div');row.className='player-row';
-    row.innerHTML='<input type="text" value="'+p.name+'" placeholder="Player '+(i+1)+'" data-idx="'+i+'" />'+(i>0?'<button class="remove-btn" data-idx="'+i+'">\u00D7</button>':'');
+    row.innerHTML='<input type="text" value="'+p.name+'" placeholder="Player '+(i+1)+'" data-idx="'+i+'" />'
+      +(i>0?'<button class="remove-btn" data-idx="'+i+'">\u00D7</button>':'');
     list.appendChild(row);
   });
   list.querySelectorAll('input').forEach(inp=>{inp.oninput=e=>{players[+e.target.dataset.idx].name=e.target.value||'Player '+(+e.target.dataset.idx+1);};});
@@ -354,7 +315,10 @@ function renderSetup(){
   ab.disabled=players.length>=max;
   ab.textContent=players.length>=max?'Max players reached ('+max+')':'+ Add player';
 }
-document.getElementById('add-player-btn').onclick=()=>{const max=maxPlayersFor(cardCount);if(players.length<max){players.push({name:'Player '+(players.length+1)});renderSetup();}};
+document.getElementById('add-player-btn').onclick=()=>{
+  const max=maxPlayersFor(cardCount);
+  if(players.length<max){players.push({name:'Player '+(players.length+1)});renderSetup();}
+};
 document.getElementById('start-game-btn').onclick=startGame;
 
 function startGame(){
@@ -435,10 +399,12 @@ function showWinner(){
   document.getElementById('winner-hand-label').textContent='Best hand: '+results[0].bh.label;
   document.getElementById('all-results').innerHTML=results.map((r,i)=>{
     const cs=handCardsStr(r.bh.cards);
-    return'<div class="result-row"><div class="result-rank'+(i===0?' gold':'')+'">'+(i+1)+'</div>'
+    return'<div class="result-row">'
+      +'<div class="result-rank'+(i===0?' gold':'')+'">'+(i+1)+'</div>'
       +'<div><div class="result-name">'+r.name+'</div>'
       +'<div class="result-hand-label">'+r.bh.label+'</div>'
-      +'<div class="result-cards-str">'+cs+'</div></div></div>';
+      +'<div class="result-cards-str">'+cs+'</div></div>'
+      +'</div>';
   }).join('');
   showScreen('winner-screen');
 }
